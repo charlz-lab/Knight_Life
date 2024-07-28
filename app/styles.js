@@ -1,15 +1,15 @@
 const appStyles = {
-    profileCard: {
-        backgroundColor: "white",
-        borderRadius: 12,
-        paddingVertical: 17,
-        paddingHorizontal: 22,
-        gap: 10,
-        alignItems: "center",
-        marginVertical: 20,
-        width: "100%",
-      },
-    // drop shadow
+  profileCard: {
+    backgroundColor: "white",
+    borderRadius: 12,
+    paddingVertical: 17,
+    paddingHorizontal: 22,
+    gap: 10,
+    alignItems: "center",
+    marginVertical: 20,
+    width: "100%",
+  },
+  // drop shadow
   shadow: {
     shadowColor: "#171717",
     shadowOffset: { width: 0, height: 0 },
@@ -29,7 +29,7 @@ const appStyles = {
       textAlign: "center",
     },
   },
-  // Toggel bar for profile 
+  // Toggle bar for profile
   toggleContainer: {
     flexDirection: "row",
     columnGap: 0,
@@ -39,5 +39,5 @@ const appStyles = {
     marginBottom: 10,
     justifyContent: "space-between",
   },
-}
-export default appStyles
+};
+export default appStyles;
