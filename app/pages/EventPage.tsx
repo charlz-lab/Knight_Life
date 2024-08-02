@@ -17,7 +17,7 @@ const EventPage = ({ route }) => {
             <Text style={styles.eventName}>{eventName}</Text>
             <Text style={styles.eventDateTime}>{eventDateTime}</Text>
             <Text style={styles.hostName}>Hosted by: {hostName}</Text>
-            {/* Add more event details as needed */}
+            {/* will add more*/}
         </ScrollView>
     );
 };
