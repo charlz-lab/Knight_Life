@@ -40,6 +40,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         marginBottom: 20,
         padding: 10,
+    
     },
     imageContainer: {
         padding: 10, 
