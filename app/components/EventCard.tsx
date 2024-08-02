@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
     placeholder: {
         width: '100%',
         height: 150,
-        backgroundColor: 'yellow',
+        
         justifyContent: 'center',
         alignItems: 'center',
     },
