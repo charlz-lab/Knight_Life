@@ -2,7 +2,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, ScrollView } from 'react-native';
 
-const EventPage = ({ route }) => {
+const EventPage = ({}) => {
     const { imageUrl, eventName, hostName, eventDateTime } = route.params;
 
     return (
