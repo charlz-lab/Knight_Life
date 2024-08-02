@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
         padding: 10,
     },
     imageContainer: {
-        padding: 10, // Add padding around the image or placeholder
+        padding: 10, 
     },
     image: {
         width: '100%',
