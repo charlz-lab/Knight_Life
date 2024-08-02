@@ -67,6 +67,10 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
+    placeholderText: {
+        color: '#555',
+        fontSize: 16,
+    },
 });
 
 export default EventCard;
