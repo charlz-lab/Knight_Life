@@ -58,6 +58,7 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: 'bold',
         marginBottom: 5,
+        
     },
     hostName: {
         fontSize: 14,
