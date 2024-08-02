@@ -8,7 +8,6 @@ import {
 } from "react-native";
 import { Icon } from "react-native-elements";
 import Ionicon from "react-native-vector-icons/FontAwesome";
-import BookmarkButton from "./BookmarkButton";
 import * as Font from "expo-font";
 import { useNavigation } from "@react-navigation/native";
 import supabase from "../lib/supabase";
@@ -40,9 +39,6 @@ const EventCard: React.FC<EventCardProps> = ({ event, navigation, onBookmarkTogg
         setIsBookmarked(!isBookmarked);
         onBookmarkToggle(event.id, !isBookmarked); // Notify parent component about the bookmark toggle
     };
-
-    // LoadAsync Google Fonts
-    const [fontLoaded, setFontLoaded] = useState<boolean>(false);
 
 
     async function getImageData() {
