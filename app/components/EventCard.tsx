@@ -9,7 +9,7 @@ interface EventCardProps {
     eventDateTime: string;
 }
 
-const EventCard: React.FC<EventCardProps> = ({ imageUrl, eventName, hostName }) => {
+const EventCard: React.FC<EventCardProps> = ({ imageUrl, eventName, hostName, eventDateTime }) => {
     return (
         <View style={styles.card}>
             <View style={styles.imageContainer}>
