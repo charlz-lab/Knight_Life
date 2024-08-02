@@ -38,7 +38,6 @@ const styles = StyleSheet.create({
     placeholder: {
         width: '100%',
         height: 200,
-        backgroundColor: 'yellow',
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 10,

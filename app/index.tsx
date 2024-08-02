@@ -10,7 +10,9 @@ export default function Index() {
       }}
     >
       <Text>Edit app/index.tsx to edit this screen.</Text>
-      <EventCard imageUrl={""} eventName={"KnightLife"} hostName={"KnightLife"} eventDateTime={""}/>
+      <EventCard imageUrl={""} eventName={"KnightLife"} hostName={"KnightLife"} eventDateTime={""} onPress={function (): void {
+        throw new Error("function not implemented");
+      } }/>
     </View>
   );
 }
