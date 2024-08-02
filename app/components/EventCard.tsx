@@ -11,13 +11,15 @@ interface EventCardProps {
 const EventCard: React.FC<EventCardProps> = ({ imageUrl, eventName, hostName }) => {
     return (
         <View style={styles.card}>
-            {imageUrl ? (
-                <Image source={{ uri: imageUrl }} style={styles.image} />
-            ) : (
-                <View style={styles.placeholder}>
-                    <Text style={styles.placeholderText}>No Image</Text>
-                </View>
-            )}
+            <View style={styles.imageContainer}>
+                {imageUrl ? (
+                    <Image source={{ uri: imageUrl }} style={styles.image} />
+                ) : (
+                    <View style={styles.placeholder}>
+                        <Text style={styles.placeholderText}>No Image</Text>
+                    </View>
+                )}
+            </View>
             <View style={styles.textContainer}>
                 <Text style={styles.eventName}>{eventName}</Text>
                 <Text style={styles.hostName}>Hosted by: {hostName}</Text>
@@ -39,9 +41,12 @@ const styles = StyleSheet.create({
         marginBottom: 20,
         padding: 10,
     },
+    imageContainer: {
+        padding: 10, // Add padding around the image or placeholder
+    },
     image: {
         width: '100%',
-        height: 150,
+        height: 100,
     },
     textContainer: {
         padding: 15,
