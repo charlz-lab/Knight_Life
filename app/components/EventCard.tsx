@@ -11,7 +11,13 @@ interface EventCardProps {
 const EventCard: React.FC<EventCardProps> = ({ imageUrl, eventName, hostName }) => {
     return (
         <View style={styles.card}>
-            <Image source={{ uri: imageUrl }} style={styles.image} />
+            {imageUrl ? (
+                <Image source={{ uri: imageUrl }} style={styles.image} />
+            ) : (
+                <View style={styles.placeholder}>
+                    <Text style={styles.placeholderText}>No Image</Text>
+                </View>
+            )}
             <View style={styles.textContainer}>
                 <Text style={styles.eventName}>{eventName}</Text>
                 <Text style={styles.hostName}>Hosted by: {hostName}</Text>
@@ -47,6 +53,13 @@ const styles = StyleSheet.create({
     hostName: {
         fontSize: 14,
         color: '#555',
+    },
+    placeholder: {
+        width: '100%',
+        height: 150,
+        backgroundColor: 'yellow',
+        justifyContent: 'center',
+        alignItems: 'center',
     },
 });
 
