@@ -9,10 +9,9 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
       <EventCard imageUrl={""} eventName={"KnightLife"} hostName={"KnightLife"} eventDateTime={""} onPress={function (): void {
-        throw new Error("function not implemented");
-      } }/>
+        throw new Error("waiting for navigation");
+      }} />
     </View>
   );
 }
