@@ -6,12 +6,16 @@ interface EventCardProps {
     imageUrl: string;
     eventName: string;
     hostName: string;
+    eventDateTime: string;
 }
 
 const EventCard: React.FC<EventCardProps> = ({ imageUrl, eventName, hostName }) => {
     return (
         <View style={styles.card}>
             <View style={styles.imageContainer}>
+                <View style={styles.dateTimeContainer}>
+                    <Text style={styles.dateTimeText}>{eventDateTime}</Text>
+                </View>
                 {imageUrl ? (
                     <Image source={{ uri: imageUrl }} style={styles.image} />
                 ) : (
@@ -75,6 +79,19 @@ const styles = StyleSheet.create({
     placeholderText: {
         color: '#555',
         fontSize: 16,
+    },
+    dateTimeContainer: {
+        position: 'absolute',
+        top: 10,
+        left: 10,
+        backgroundColor: 'rgba(0, 0, 0, 0.6)',
+        paddingHorizontal: 8,
+        paddingVertical: 4,
+        borderRadius: 5,
+    },
+    dateTimeText: {
+        color: '#fff',
+        fontSize: 12,
     },
 });
 
