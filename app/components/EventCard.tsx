@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
         marginBottom: 20,
         padding: 10,
         height: 180
-    
+        width: 
     },
     imageContainer: {
         flex: 1,
@@ -66,10 +66,11 @@ const styles = StyleSheet.create({
     },
     placeholder: {
         width: '100%',
-        height: 150,
+        height: '100%',
         
         justifyContent: 'center',
         alignItems: 'center',
+        borderRadius: 10,
     },
     placeholderText: {
         color: '#555',
