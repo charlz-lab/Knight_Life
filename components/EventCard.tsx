@@ -1,34 +1,37 @@
 // EventCard.tsx
 import React from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, Dimensions, TouchableOpacity } from 'react-native';
 
 interface EventCardProps {
-    imageUrl: string;
+    imageUrl?: string;
     eventName: string;
     hostName: string;
     eventDateTime: string;
+    onPress: () => void; // New prop for handling presses
 }
 
-const EventCard: React.FC<EventCardProps> = ({ imageUrl, eventName, hostName, eventDateTime }) => {
+const EventCard: React.FC<EventCardProps> = ({ imageUrl, eventName, hostName, eventDateTime, onPress }) => {
     return (
-        <View style={styles.card}>
-            <View style={styles.imageContainer}>
-                <View style={styles.dateTimeContainer}>
-                    <Text style={styles.dateTimeText}>{eventDateTime}</Text>
-                </View>
-                {imageUrl ? (
-                    <Image source={{ uri: imageUrl }} style={styles.image} />
-                ) : (
-                    <View style={styles.placeholder}>
-                        <Text style={styles.placeholderText}>No Image</Text>
+        <TouchableOpacity onPress={onPress}>
+            <View style={styles.card}>
+                <View style={styles.imageContainer}>
+                    <View style={styles.dateTimeContainer}>
+                        <Text style={styles.dateTimeText}>{eventDateTime}</Text>
                     </View>
-                )}
+                    {imageUrl ? (
+                        <Image source={{ uri: imageUrl }} style={styles.image} />
+                    ) : (
+                        <View style={styles.placeholder}>
+                            <Text style={styles.placeholderText}>No Image</Text>
+                        </View>
+                    )}
+                </View>
+                <View style={styles.textContainer}>
+                    <Text style={styles.eventName}>{eventName}</Text>
+                    <Text style={styles.hostName}>Hosted by: {hostName}</Text>
+                </View>
             </View>
-            <View style={styles.textContainer}>
-                <Text style={styles.eventName}>{eventName}</Text>
-                <Text style={styles.hostName}>Hosted by: {hostName}</Text>
-            </View>
-        </View>
+        </TouchableOpacity>
     );
 };
 
@@ -43,42 +46,14 @@ const styles = StyleSheet.create({
         elevation: 3,
         backgroundColor: '#fff',
         marginBottom: 20,
-        padding: 10,
-        height: 180,
-        width: 350
+        width: 350, 
+        height: 180, 
+        alignSelf: 'center',
     },
     imageContainer: {
+        padding: 10,
+        position: 'relative', 
         flex: 1,
-        padding: 10, 
-    },
-    image: {
-        width: '100%',
-        height: 100,
-    },
-    textContainer: {
-        padding: 15,
-    },
-    eventName: {
-        fontSize: 18,
-        fontWeight: 'bold',
-        marginBottom: 5,
-        
-    },
-    hostName: {
-        fontSize: 14,
-        color: '#555',
-    },
-    placeholder: {
-        width: '100%',
-        height: '100%',
-        
-        justifyContent: 'center',
-        alignItems: 'center',
-        borderRadius: 10,
-    },
-    placeholderText: {
-        color: '#555',
-        fontSize: 16,
     },
     dateTimeContainer: {
         position: 'absolute',
@@ -92,6 +67,35 @@ const styles = StyleSheet.create({
     dateTimeText: {
         color: '#fff',
         fontSize: 12,
+    },
+    image: {
+        width: '100%',
+        height: '100%',
+        borderRadius: 10,
+    },
+    placeholder: {
+        width: '100%',
+        height: '100%',
+        backgroundColor: 'yellow',
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 10,
+    },
+    placeholderText: {
+        color: '#555',
+        fontSize: 16,
+    },
+    textContainer: {
+        padding: 15,
+    },
+    eventName: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        marginBottom: 5,
+    },
+    hostName: {
+        fontSize: 14,
+        color: '#555',
     },
 });
 
