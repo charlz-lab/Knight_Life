@@ -1,5 +1,5 @@
 import { Text, View } from "react-native";
-import EventCard from "./components/EventCard";
+import EventCard from "../components/EventCard";
 export default function Index() {
   return (
     <View
