@@ -37,6 +37,7 @@ const styles = StyleSheet.create({
         elevation: 3,
         backgroundColor: '#fff',
         marginBottom: 20,
+        padding: 10,
     },
     image: {
         width: '100%',
