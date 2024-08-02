@@ -40,9 +40,11 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         marginBottom: 20,
         padding: 10,
+        height: 180
     
     },
     imageContainer: {
+        flex: 1,
         padding: 10, 
     },
     image: {
