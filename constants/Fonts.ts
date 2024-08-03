@@ -1,7 +1,7 @@
 const header = "Prompt-Bold";
 const normal = "IBMPlexSans";
 
-export const Fonts = {
+const Fonts = {
   /*
     Additional Features:
       Please use sparingly for generalized
@@ -53,3 +53,5 @@ export const Fonts = {
     fontSize: 18,
   },
 };
+
+export default Fonts;
