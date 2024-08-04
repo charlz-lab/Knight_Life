@@ -8,6 +8,7 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         headerShown: false,
+        tabBarShowLabel: false,
         tabBarInactiveTintColor: Colors.navBar.tabIconDefault,
         tabBarActiveTintColor: Colors.navBar.tabIconSelected,
         tabBarStyle: styles.tabContainer,
@@ -17,7 +18,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: "",
+          title: "Home",
           tabBarIcon: ({ color }) => (
             <MaterialIcons size={28} name="home" color={color} />
           ),
@@ -26,7 +27,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="profile"
         options={{
-          title: "",
+          title: "Profile",
           tabBarIcon: ({ color }) => (
             <FontAwesome5 size={21} name="user-alt" color={color} />
           ),
@@ -42,6 +43,5 @@ const styles = StyleSheet.create({
   },
   tab: {
     backgroundColor: Colors.navBar.background,
-    padding: 6,
   },
 });
