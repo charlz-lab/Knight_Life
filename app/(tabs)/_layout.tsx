@@ -7,7 +7,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: "Home",
+          title: "",
           tabBarIcon: ({ color }) => (
             <MaterialIcons size={28} name="home" color={color} />
           ),
@@ -16,7 +16,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="profile"
         options={{
-          title: "Profile",
+          title: "",
           tabBarIcon: ({ color }) => (
             <FontAwesome5 size={21} name="user-alt" color={color} />
           ),
